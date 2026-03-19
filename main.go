@@ -18,7 +18,7 @@ func main() {
 		log.Fatal("Port not found in environment")
 	}
 
-	// Set up router
+	// Set up router instance
 	router := chi.NewRouter()
 
 	// CORS middleware
@@ -30,6 +30,7 @@ func main() {
 		AllowCredentials: false,
 		MaxAge:           300, 
 	}))
+
 
 	v1router := chi.NewRouter()
 
